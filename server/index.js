@@ -17,17 +17,24 @@ app.get("/", (req, res) => {
 
 const liveChatId = "EiEKGFVDZnhkeGxEaTJvMVZybEJkenUtR1E5dxIFL2xpdmU";
 const MESSAGES_URL = "https://www.googleapis.com/youtube/v3/liveChat/messages";
+let messages = [];
+const messagesById = {};
 
 function getLatestMessages() {
-  return fetch(`${MESSAGES_URL}?liveChatId=${liveChatId}&part=snippet,authorDetails&key=${
+  return fetch(`${MESSAGES_URL}?liveChatId=${liveChatId}&part=snippet,authorDetails&maxResults=200&key=${
     process.env.YT_API_KEY
   }
   `)
     .then(res => res.json())
     .then(result => {
-      console.log(result);
+      console.log(result.items);
+      messages = result;
     });
 }
+
+app.get("/messages", (req, res) => {
+  res.json(messages);
+});
 
 getLatestMessages();
 

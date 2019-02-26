@@ -1,8 +1,0 @@
-{
-  "name": "live-chat-manager",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/tracy-codes/live-chat-manager.git",
-  "author": "Tracy Adams <tracy@tracycodes.com>",
-  "license": "MIT"
-}

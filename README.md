@@ -1,9 +1,9 @@
 # Live Chat Manager
 
-- [ ] Setup Sever
-- [ ] Create an API Key
+- [x] Setup Sever
+- [x] Create an API Key
 - [ ] Call API with setTimeout to get latest chat messages
-  - [ ] https://developers.google.com/youtube/v3/live/docs/liveChatMessages
+  - [x] https://developers.google.com/youtube/v3/live/docs/liveChatMessages
   - [ ] Keep in-mem array of all messages
   - [ ] Append new messages as they appear
     - [ ] Emit new messages with socket
